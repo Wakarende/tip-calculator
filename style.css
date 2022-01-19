@@ -53,6 +53,7 @@ a:hover {
   color: #00474b;
 }
 
+/* Card  */
 .calculator {
   display: flex;
   justify-content: center;
@@ -70,6 +71,23 @@ a:hover {
   display: flex;
   column-gap: 40px;
 }
+
+/* Media Queries  */
+@media screen and (max-width: 640px) {
+  .card-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    margin-bottom: 40px;
+  }
+
+  .right {
+    text-align: center;
+  }
+}
+
 
 /* Card Left Side  */
 .bill-input {
@@ -121,6 +139,17 @@ a:hover {
   background-color: #f3f8fb;
 }
 
+/* Media Queries  */
+@media screen and(max-width: 640px) {
+  .bi {
+    font-size: 24px;
+  }
+
+  .bill-total {
+    font-size: 24px;
+  }
+}
+
 /* Card Right Side  */
 .right {
   background-color: var(--veryDarkCyan);
@@ -145,11 +174,12 @@ small {
   justify-content: space-between;
 }
 
-.reset-btn {
-  text-align: center;
+.reset {
+  display: flex;
+  justify-content: center;
 }
 
-.reset {
+.reset-btn {
   width: 300px;
   border-radius: 5px;
   padding-top: 8px;
@@ -160,7 +190,7 @@ small {
   font-weight: 700;
 }
 
-.reset:hover {
+.reset-btn:hover {
   background-color: var(--strongCyan);
 }
 
@@ -173,3 +203,6 @@ small {
   font-size: 40px;
   color: var(--strongCyan);
 }
+
+/* Media Queries  */
+@media screen and(max-width:640px) {}
