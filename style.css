@@ -15,9 +15,11 @@ html {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+
 }
 
 body {
+  background-color: var(--lightGrayishCyan);
   font-family: 'Bai Jamjuree',
     sans-serif;
   font-family: 'Be Vietnam Pro',
@@ -30,4 +32,23 @@ body {
     sans-serif;
   font-family: 'Space Mono',
     monospace;
+
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.card {
+  width: 700px;
+  margin-top: 150px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.card-flex {
+  display: flex;
+  column-gap: 40px;
 }
