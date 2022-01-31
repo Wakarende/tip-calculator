@@ -14,11 +14,14 @@ tips.addEventListener('click', e =>{
   }
 });
 
+// Value from bill input 
 let bill = totalBill.valueAsNumber;
 console.log(bill);
 
+//Value from people input
 let numberOfPeople = people.valueAsNumber;
 console.log(numberOfPeople);
+
 
 // TOTAL TIP CALCULATION 
 function calculateTip(bill, tips, people){
