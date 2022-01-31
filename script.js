@@ -10,7 +10,6 @@ let people = document.getElementById("number-of-people");
 tips.addEventListener('click', e =>{
   if(e.target.matches('button')){
     console.log('tips clicked.');
-    console.log(tips.value);
   }
 });
 
