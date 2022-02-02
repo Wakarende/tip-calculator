@@ -2,26 +2,35 @@
 
 let totalBill = document.getElementById("total-bill");
 
-let tips = document.querySelectorAll('.tip-btn');
-let people = document.getElementById("number-of-people").innerHTML;
+let tipBtns = document.querySelectorAll('.tip-btn');
+let people = document.getElementById("number-of-people");
 
-console.log(tips);
+console.log(tipBtns);
 
 // Get value of totalBill
 
 function bill(ele){
   if(event.key === 'Enter'){
-    console.log(ele.value);
+    return parseFloat(ele.value);
   }
 }
 
 // Get value of people
 function totalPeople(ele){
   if(event.key === 'Enter'){
-    console.log(ele.value);
+    return parseInt(ele.value);
   }
 }
 
+
+
+//Get value of tips buttons.
+
+// tipsPercentage.addEventListener('click', function(){
+//   for(var i = 0; i < tipsPercentage.length; i++){
+//     console.log(tipsPercentage[i].value);
+//   }
+// });
 
 // tips.addEventListener('click', function() {
 // });

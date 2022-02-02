@@ -149,6 +149,13 @@ a:hover {
   width: 100px;
 }
 
+.custom{
+  width: 70px;
+  border: none;
+  background-color: #f3f8fb;
+  cursor: pointer;
+}
+
 .people-btn {
   width: 300px;
   display: flex;
