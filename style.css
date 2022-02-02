@@ -53,6 +53,10 @@ a:hover {
   color: #00474b;
 }
 
+p{
+  color:#a2b7b7; ;
+}
+
 /* Logo  */
 .logo {
   text-align: center;
@@ -149,14 +153,14 @@ a:hover {
 }
 
 .custom{
-  width: 70px;
+  width: 100%;
   border: none;
   background-color: #f3f8fb;
   cursor: pointer;
 }
 
 .people-btn {
-  width: 300px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border: none;
@@ -165,14 +169,12 @@ a:hover {
 
 /* Media Queries  */
 @media screen and(max-width: 640px) {
-  .bi {
-    font-size: 24px;
-  }
-
-  .bill-total {
-    font-size: 24px;
+  .btn:hover{
+    background-color: var(--strongCyan);
   }
 }
+/* END  */
+
 
 /* Card Right Side  */
 .right {
@@ -191,6 +193,7 @@ small {
   display: flex;
   justify-content: space-between;
 }
+
 
 .tip-total {
   font-weight: 700;
@@ -229,4 +232,8 @@ small {
 }
 
 /* Media Queries  */
-@media screen and(max-width:640px) {}
+@media screen and(max-width:640px) {
+  .reset-btn:hover{
+    background-color: var(--strongCyan);
+  }
+}

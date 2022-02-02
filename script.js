@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 let totalBill = document.getElementById("total-bill");
 totalBill.addEventListener('change', calculateTip);
@@ -19,27 +19,34 @@ let resetBtn = document.getElementById("reset").addEventListener('click', functi
   console.log("reset btn clicked!");
   totalBill.value = 0;
   people.value = 0;
+  // customBtn.value = 0;
   document.getElementById("tip-per-person").textContent = '$0.00';
   document.getElementById("amout-per-person").textContent = '$0.00';
-
+  document.getElementById("amout-per-person").style.fontSize = 'large';
+  document.getElementById("tip-per-person").style.fontSize = 'large';
 });
 
-
+for(const btn of tipBtns) {
+  btn.addEventListener('click',calculateTip);
+  };
 
 // TOTAL TIP CALCULATION 
 function calculateTip(){
   let bill = parseFloat(totalBill.value);
   let numberOfPeople = parseFloat(people.value);
   // Tip btns value 
-  for(const btn of tipBtns) {
-  btn.addEventListener('click',function(){
-    let tipPercentage =this.value;
-    return tipPercentage;
-    });
-  };
+  // for(const btn of tipBtns) {
+  // btn.addEventListener('click',function(){
+  //   this.value;
+  //   console.log(this.value);
+  //   });
+  // };
 
-  tipPercentage = parseFloat(this.value);
+  
+
+  let tipPercentage = parseFloat(this.value);
   console.log(tipPercentage);
+
   let customTip = parseFloat(customBtn.value);
 
   totalBill.value = bill.toFixed(2);
@@ -50,22 +57,17 @@ function calculateTip(){
   let totalPerPerson = (total/numberOfPeople).toFixed(2);
 
 
-  if (tipPercentage == customTip){
-    totalTip = parseFloat((bill * (customTip/100)).toFixed(2));
-  }
-
-    
-  
-
-
-  
-
   if(bill === 0 || tipPercentage === NaN || numberOfPeople === 0){
     document.getElementById("amout-per-person").textContent = '0.00';
     document.getElementById("tip-per-person").textContent = '0.00';
+    document.getElementById("amout-per-person").style.fontSize = 'large';
+    document.getElementById("tip-per-person").style.fontSize = 'large';
   }else{
     document.getElementById("amout-per-person").textContent = `\$ ${totalPerPerson}`;
     document.getElementById("tip-per-person").textContent = `\$ ${tipPerPerson}`;
+    document.getElementById("amout-per-person").style.fontSize = 'large';
+    document.getElementById("tip-per-person").style.fontSize = 'large';
+
   }
 
 }
@@ -73,13 +75,5 @@ function calculateTip(){
 calculateTip();
 
 
-//tip per person 
-
-// function tipPerPerson(totalTip, people){
-//   let perPersonTip = totalTip / people;
-//   console.log(perPersonTip);
-//   return perPersonTip;
-
-// }
 
 
