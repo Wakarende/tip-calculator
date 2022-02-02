@@ -1,25 +1,36 @@
-'use strict';
+// 'use strict';
 
 let totalBill = document.getElementById("total-bill");
 
-let tips = document.querySelector('.tips');
-let people = document.getElementById("number-of-people");
+let tips = document.querySelectorAll('.tip-btn');
+let people = document.getElementById("number-of-people").innerHTML;
 
+console.log(tips);
 
-// Tips button event listener 
-tips.addEventListener('click', e =>{
-  if(e.target.matches('button')){
-    console.log('tips clicked.');
+// Get value of totalBill
+
+function bill(ele){
+  if(event.key === 'Enter'){
+    console.log(ele.value);
   }
-});
+}
+
+// Get value of people
+function totalPeople(ele){
+  if(event.key === 'Enter'){
+    console.log(ele.value);
+  }
+}
+
+
+// tips.addEventListener('click', function() {
+// });
 
 // Value from bill input 
-let bill = totalBill.valueAsNumber;
-console.log(bill);
+// console.log(totalBill);
 
 //Value from people input
-let numberOfPeople = people.valueAsNumber;
-console.log(numberOfPeople);
+// console.log(people);
 
 
 // TOTAL TIP CALCULATION 
@@ -29,7 +40,6 @@ function calculateTip(bill, tips, people){
   return totalTip;
 }
 
-
 //tip per person
 function tipPerPerson(totalTip, people){
   let perPersonTip = totalTip / people;
@@ -37,4 +47,5 @@ function tipPerPerson(totalTip, people){
   return perPersonTip;
 
 }
+
 

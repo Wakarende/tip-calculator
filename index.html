@@ -40,9 +40,8 @@
         <!-- Total Bill  -->
         <div class="left">
           <p class="bill"> Bill</p>
-          <input class="bill-input btn" type="number" id="total-bill" value=0>
-          <!-- <i class="bi bi-currency-dollar"></i> -->
-          <!-- <a href="" class="bill-total">0</a> -->
+          <input class="bill-input btn" type="text" id="total-bill" onkeydown="bill(this)">
+          <i class="bi bi-currency-dollar "></i>
           </input>
           <!-- Tip  -->
           <p class="tip-text mt-5">Select Tip %</p>
@@ -68,11 +67,10 @@
           </div>
           <div class="people">
             <p class="people-text mt-5" type="number">Number of People</p>
-            <!-- <input class="people-btn btn" id="number-of-people" value="0"> -->
-            <!-- <i class="bi bi-person-fill"></i> -->
-            <!-- <a class="number">5</a> -->
-            <!-- </input> -->
-            <input type="number" class="people-btn btn" id="number-of-people" value=0>
+            <input class="people-btn btn" id="number-of-people" onkeydown="totalPeople(this)">
+            <i class="bi bi-person-fill"></i>
+            <a class="number">5</a>
+            </input>
           </div>
         </div>
         <!-- END Card Left  -->
