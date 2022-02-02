@@ -40,7 +40,7 @@
         <!-- Total Bill  -->
         <div class="left">
           <p class="bill"> Bill</p>
-          <input class="bill-input btn" type="text" id="total-bill" onkeydown="bill(this)">
+          <input class="bill-input btn" type="number" id="total-bill" value="0.00">
           <i class="bi bi-currency-dollar "></i>
           </input>
           <!-- Tip  -->
@@ -62,13 +62,13 @@
               <a class="tip">50%</a>
             </button>
             <button class="custom-btn btn">
-              <input type="text" class="custom" placeholder="Custom">
+              <input class="custom" placeholder="Custom" type="number">
               <!-- <a class="custom">Custom</a> -->
             </button>
           </div>
           <div class="people">
             <p class="people-text mt-5" type="number">Number of People</p>
-            <input class="people-btn btn" id="number-of-people" onkeydown="totalPeople(this)">
+            <input class="people-btn btn" id="people" type="number" value="5">
             <i class="bi bi-person-fill"></i>
             <a class="number">5</a>
             </input>
@@ -79,11 +79,11 @@
         <div class="right">
           <div class="tip-amount mb-4">
             <p class="amount-text text-white"> Tip Amount <br><small>/ person</small></p>
-            <p class="amount-number">$0.00</p>
+            <p class="amount-number" id="amout-per-person">$0.00</p>
           </div>
           <div class="tip-total">
             <p class="total-text text-white">Total <br><small>/ person</small></p>
-            <p class="total-number">$0.00</p>
+            <p class="total-number" id="tip-per-person">$0.00</p>
           </div>
           <div class="reset">
             <button class="reset-btn mt-5 ">RESET</button>

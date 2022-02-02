@@ -1,11 +1,18 @@
 // 'use strict';
 
 let totalBill = document.getElementById("total-bill");
+totalBill.addEventListener('change', calculateTip);
 
-let tipBtns = document.querySelectorAll('.tip-btn');
-let people = document.getElementById("number-of-people");
+let tipBtns = document.querySelectorAll("button[type='number']");
 
-console.log(tipBtns);
+tipBtns.forEach(function(button){
+  button.addEventListener('click', calculateTip);
+});
+
+
+let people = document.getElementById("people");
+people.addEventListener('change', calculateTip);
+
 
 // Get value of totalBill
 
@@ -22,34 +29,25 @@ function totalPeople(ele){
   }
 }
 
-
-
-//Get value of tips buttons.
-
-// tipsPercentage.addEventListener('click', function(){
-//   for(var i = 0; i < tipsPercentage.length; i++){
-//     console.log(tipsPercentage[i].value);
-//   }
-// });
-
-// tips.addEventListener('click', function() {
-// });
-
-// Value from bill input 
-// console.log(totalBill);
-
-//Value from people input
-// console.log(people);
-
-
 // TOTAL TIP CALCULATION 
-function calculateTip(bill, tips, people){
-  let totalTip = (bill * (tips/100))/people;
-  console.log(totalTip);
-  return totalTip;
+function calculateTip(){
+  let bill = parseFloat(totalBill.value);
+  let numberOfPeople = parseFloat(people.value);
+  let tipPercentage = parseFloat(tipBtns.value);
+
+  totalBill.value = bill.toFixed(2);
+
+  let totalTip = parseFloat((bill * (tipPercentage/100)).toFixed(2));
+  let total = parseFloat((bill + totalTip).toFixed(2));
+  let tipPerPerson = (totalTip / numberOfPeople).toFixed(2);
+  let totalPerPerson = (total/numberOfPeople).toFixed(2);
+
+  document.getElementById("amout-per-person").textContent = `\$ ${totalPerPerson}`;
+  document.getElementById("tip-per-person").textContent = `\$ ${tipPerPerson}`;
 }
 
-//tip per person
+//tip per person 
+
 function tipPerPerson(totalTip, people){
   let perPersonTip = totalTip / people;
   console.log(perPersonTip);
