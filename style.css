@@ -109,13 +109,12 @@ a:hover {
 
 /* Card Left Side  */
 .bill-input {
-  width: 300px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border: none;
   background-color: #f3f8fb;
 }
-
 .tips {
   display: flex;
   flex-wrap: wrap;

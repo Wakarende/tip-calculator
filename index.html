@@ -12,6 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Be+Vietnam+Pro:wght@400;700&family=Comfortaa:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Roboto:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -40,9 +42,11 @@
         <!-- Total Bill  -->
         <div class="left">
           <p class="bill"> Bill</p>
-          <input class="bill-input btn" type="number" id="total-bill" value="0.00">
-          <i class="bi bi-currency-dollar "></i>
-          </input>
+          <div class="inputi-icons">
+            <!-- <i class="fas fa-dollar-sign icon"></i> -->
+            <input class="bill-input btn" type="number" id="total-bill" value="0.00">
+            </input>
+          </div>
           <!-- Tip  -->
           <p class="tip-text mt-5">Select Tip %</p>
           <div class="tips">
@@ -62,15 +66,14 @@
               <a class="tip">50%</a>
             </button>
             <button class="custom-btn btn">
-              <input class="custom" placeholder="Custom" type="number">
-              <!-- <a class="custom">Custom</a> -->
+              <input class="custom" placeholder="Custom" type="number" id="custom">
             </button>
           </div>
           <div class="people">
             <p class="people-text mt-5" type="number">Number of People</p>
             <input class="people-btn btn" id="people" type="number" value="5">
-            <i class="bi bi-person-fill"></i>
-            <a class="number">5</a>
+            <!-- <i class="bi bi-person-fill"></i>
+            <a class="number">5</a> -->
             </input>
           </div>
         </div>

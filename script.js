@@ -6,7 +6,9 @@ totalBill.addEventListener('change', calculateTip);
 const tipBtns = document.querySelectorAll(".btn");
 console.log(tipBtns);
 
-
+// Custom tips 
+const customBtn = document.getElementById("custom")
+customBtn.addEventListener('change', calculateTip);
 
 // People Value 
 let people = document.getElementById("people");
@@ -22,6 +24,8 @@ let resetBtn = document.getElementById("reset").addEventListener('click', functi
 
 });
 
+
+
 // TOTAL TIP CALCULATION 
 function calculateTip(){
   let bill = parseFloat(totalBill.value);
@@ -32,17 +36,29 @@ function calculateTip(){
     let tipPercentage =this.value;
     return tipPercentage;
     });
-
   };
+
   tipPercentage = parseFloat(this.value);
   console.log(tipPercentage);
+  let customTip = parseFloat(customBtn.value);
 
   totalBill.value = bill.toFixed(2);
-
+  
   let totalTip = parseFloat((bill * (tipPercentage/100)).toFixed(2));
   let total = parseFloat((bill + totalTip).toFixed(2));
   let tipPerPerson = (totalTip / numberOfPeople).toFixed(2);
   let totalPerPerson = (total/numberOfPeople).toFixed(2);
+
+
+  if (tipPercentage == customTip){
+    totalTip = parseFloat((bill * (customTip/100)).toFixed(2));
+  }
+
+    
+  
+
+
+  
 
   if(bill === 0 || tipPercentage === NaN || numberOfPeople === 0){
     document.getElementById("amout-per-person").textContent = '0.00';
@@ -51,9 +67,6 @@ function calculateTip(){
     document.getElementById("amout-per-person").textContent = `\$ ${totalPerPerson}`;
     document.getElementById("tip-per-person").textContent = `\$ ${tipPerPerson}`;
   }
-
-  
-
 
 }
 
